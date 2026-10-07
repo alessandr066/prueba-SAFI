@@ -68,7 +68,7 @@ class RecursoController extends Controller
             $recurso->toArray()
         );
 
-        return redirect()->route('recursos.index')->with('success', 'Recurso registrado con éxito.');
+        return redirect()->route('inventario.index')->with('success', 'Recurso registrado con éxito.');
     }
 
     // ========================
@@ -141,7 +141,7 @@ class RecursoController extends Controller
 
         LogActionService::log('Editar Recurso', 'recursos', $id, $before, $after);
 
-        return redirect()->route('recursos.index')->with('success', 'Recurso actualizado con éxito.');
+        return redirect()->route('inventario.index')->with('success', 'Recurso actualizado con éxito.');
     }
 
 
@@ -168,7 +168,7 @@ class RecursoController extends Controller
             null
         );
 
-        return redirect()->route('recursos.index')
+        return redirect()->route('inventario.index')
             ->with('success', 'Recurso eliminado con éxito.');
     }
 

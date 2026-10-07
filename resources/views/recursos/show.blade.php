@@ -188,7 +188,7 @@
 
         {{-- Botón regresar --}}
         <div class="mt-6">
-            <a href="{{ route('recursos.index') }}"
+            <a href="{{ route('inventario.index') }}"
                 class="bg-ues-primary hover:bg-ues-secondary text-white px-4 py-2 rounded shadow">
                 ← Volver al listado
             </a>

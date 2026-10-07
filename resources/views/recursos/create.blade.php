@@ -5,7 +5,7 @@
             Registrar Recurso
         </h2>
 
-        <form action="{{ route('recursos.store') }}" method="POST" class="space-y-5">
+        <form action="{{ route('inventario.store') }}" method="POST" class="space-y-5">
             @csrf
 
             {{-- Código --}}
@@ -108,7 +108,7 @@
 
             {{-- Botones --}}
             <div class="pt-6 flex justify-between">
-                <a href="{{ route('recursos.index') }}"
+                <a href="{{ route('inventario.index') }}"
                     class="bg-ues-primary hover:bg-ues-secondary text-white px-4 py-2 rounded shadow">
                     ← Volver al listado
                 </a>

@@ -31,7 +31,7 @@
 
             {{-- INVENTARIO --}}
             @role('Administrador,Jefe UF-Facultad,Encargado UAF-Facultad,Decano Facultad,Representante Unidad/Escuela')
-                <li><a href="{{ route('recursos.index') }}" class="hover:text-ues-primary">Inventario</a></li>
+                <li><a href="{{ route('inventario.index') }}" class="hover:text-ues-primary">Inventario</a></li>
             @endrole
 
             {{-- Productos --}}

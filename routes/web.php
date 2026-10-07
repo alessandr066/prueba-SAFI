@@ -118,11 +118,6 @@ Route::middleware('auth')->group(function () {
     Route::middleware(['role:Decano Facultad'])->group(function () {
 
         Route::get(
-            '/solicitudes/aprobar',
-            [SolicitudPeticionController::class, 'aprobar']
-        )->name('solicitudes.aprobar');
-
-        Route::get(
             '/solicitudes/aprobar/{id}',
             [SolicitudPeticionController::class, 'aprobarShow']
         )->name('solicitudes.aprobar.show');
@@ -159,9 +154,6 @@ Route::middleware('auth')->group(function () {
         Route::get('/recursos/{id}', [RecursoController::class, 'show'])->name('recursos.show');
     });
 
-    Route::get('/siniestros/revisar/{id}', [SiniestroController::class, 'revisarShow'])
-        ->name('siniestros.revisar.show');
-
     Route::middleware(['role:Jefe UF-Facultad,Encargado UAF-Facultad'])->group(function () {
         Route::get('/siniestros/revisar/{id}', [SiniestroController::class, 'revisarShow'])
             ->name('siniestros.revisar.show');
@@ -175,7 +167,7 @@ Route::middleware('auth')->group(function () {
     | Inventario (Recursos)
     |--------------------------------------------------------------------------
     */
-    Route::prefix('inventario')->name('recursos.')->group(function () {
+    Route::prefix('inventario')->name('inventario.')->group(function () {
         Route::get('/',               [RecursoController::class, 'index'])->name('index');
         Route::get('/crear',          [RecursoController::class, 'create'])->name('create');
         Route::post('/',              [RecursoController::class, 'store'])->name('store');

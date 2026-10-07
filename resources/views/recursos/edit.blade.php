@@ -15,7 +15,7 @@
 
         <div class="bg-white shadow rounded-xl p-6">
 
-            <form action="{{ route('recursos.update', $recurso->id_recurso) }}" method="POST" class="space-y-5">
+            <form action="{{ route('inventario.update', $recurso->id_recurso) }}" method="POST" class="space-y-5">
                 @csrf
                 @method('PUT')
 
@@ -113,7 +113,7 @@
                 {{-- Botones --}}
                 <div class="flex justify-between items-center pt-6 border-t">
 
-                    <a href="{{ route('recursos.index') }}"
+                    <a href="{{ route('inventario.index') }}"
                         class="bg-ues-primary hover:bg-ues-secondary text-white px-4 py-2 rounded shadow">
                         ← Volver al listado
                     </a>

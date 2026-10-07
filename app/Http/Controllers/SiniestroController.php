@@ -85,7 +85,7 @@ class SiniestroController extends Controller
             $siniestro->toArray()
         );
 
-        return redirect()->route('recursos.show', $validated['recurso_id'])
+        return redirect()->route('inventario.show', $validated['recurso_id'])
             ->with('success', 'Siniestro reportado correctamente.');
     }
 

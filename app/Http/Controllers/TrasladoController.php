@@ -118,7 +118,7 @@ class TrasladoController extends Controller
                 $after
             );
 
-            return redirect()->route('recursos.index')
+            return redirect()->route('inventario.index')
                 ->with('success', 'Traslado registrado con éxito.');
         } catch (\Exception $e) {
             dd($e->getMessage());

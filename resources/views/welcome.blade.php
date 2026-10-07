@@ -27,7 +27,7 @@
 
                         {{-- Inventario --}}
                         @role('Administrador,Jefe UF-Facultad,Encargado UAF-Facultad,Decano Facultad')
-                            <a href="{{ route('recursos.index') }}"
+                            <a href="{{ route('inventario.index') }}"
                                 class="p-4 bg-gray-100 rounded-xl border hover:bg-gray-200 transition shadow-sm">
                                 <h3 class="font-semibold text-ues-primary text-lg">Inventario</h3>
                                 <p class="text-sm text-gray-600">Consulta recursos, activos y equipos.</p>

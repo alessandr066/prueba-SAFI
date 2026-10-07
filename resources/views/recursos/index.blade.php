@@ -6,12 +6,12 @@
         </div>
         @role('Jefe UF-Facultad,Encargado UAF-Facultad,Decano Facultad')
             <div class="mt-8 flex justify-between">
-                <a href="{{ route('recursos.create') }}"
+                <a href="{{ route('inventario.create') }}"
                     class="bg-ues-primary hover:bg-ues-secondary text-white px-4 py-2 rounded mb-4 inline-block">
                     Registrar Recurso
                 </a>
                 <!-- Botón Exportar PDF -->
-                <a href="{{ route('recursos.exportarPDF') }}"
+                <a href="{{ route('inventario.exportarPDF') }}"
                     class="bg-ues-primary hover:bg-ues-secondary text-white px-4 py-2 rounded mb-4 inline-block">
                     Exportar PDF
                 </a>
@@ -60,14 +60,14 @@
                             <div class="flex flex-wrap gap-1">
 
                                 {{-- TODOS pueden ver detalles --}}
-                                <a href="{{ route('recursos.show', $recurso->id_recurso) }}" class="btn-primary">
+                                <a href="{{ route('inventario.show', $recurso->id_recurso) }}" class="btn-primary">
                                     Detalles
                                 </a>
 
                                 {{-- SOLO roles administrativos --}}
                                 @role('Jefe UF-Facultad,Encargado UAF-Facultad,Decano Facultad')
                                     @if ($recurso->estado_id != 5)
-                                        <a href="{{ route('recursos.edit', $recurso->id_recurso) }}" class="btn-warning">
+                                        <a href="{{ route('inventario.edit', $recurso->id_recurso) }}" class="btn-warning">
                                             Editar
                                         </a>
 
@@ -76,7 +76,7 @@
                                             Trasladar
                                         </a>
 
-                                        <form action="{{ route('recursos.destroy', $recurso->id_recurso) }}"
+                                        <form action="{{ route('inventario.destroy', $recurso->id_recurso) }}"
                                             method="POST">
                                             @csrf @method('DELETE')
                                             <button type="submit" class="btn-danger"

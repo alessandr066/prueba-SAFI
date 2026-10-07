@@ -41,7 +41,7 @@
             {{-- Botones simétricos --}}
             <div class="mt-8 flex justify-between">
                 {{-- Botón regresar --}}
-                <a href="{{ route('recursos.index') }}"
+                <a href="{{ route('inventario.index') }}"
                     class="bg-ues-primary hover:bg-ues-secondary text-white px-4 py-2 rounded shadow">
                     ← Volver al listado
                 </a>
