@@ -17,11 +17,12 @@ class DatabaseSeeder extends Seeder
             SafEstadoTableSeeder::class,
             SafRolTableSeeder::class,
             SafCargoTableSeeder::class,
-            SafAreaTableSeeder::class,
+            SafTipoAreaTableSeeder::class,
             SafUbicacionTableSeeder::class,
             SafTipoDescargoTableSeeder::class,
             SafTipoMantenimientoTableSeeder::class,
             SafTipoTrasladoTableSeeder::class,
+            SafAreaTableSeeder::class,
         ]);
 
         /*
